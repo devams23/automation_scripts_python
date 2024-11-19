@@ -96,7 +96,7 @@ def post_tweet():
         print("Tweet posted successfully!")
         print(json.dumps(response.json(), indent=4, sort_keys=True))
 
-# Schedule the script to run every 3 hours
+# Schedule the script to run every 20 seconds
 schedule.every(20).seconds.do(post_tweet)
 
 # Keep the script running
