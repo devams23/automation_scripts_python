@@ -28,8 +28,10 @@ def animate(i):
     mem_val = psutil.virtual_memory().percent
     disk_val = psutil.disk_usage('D:').percent
 
+    #sending mail if the values exceeds the  threshold
     if cpu_val >= 95 or mem_val>= 80:
         print("sending mail")
+
         send_mail()
         
      
